@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>BOM(Browser Object Model)</h1>
+	<h2>3. localtion 객체</h2>
+	<h3>Refresh Page 하는 방법</h3>
+	
+	<h5>가볍게 새로고침 할때</h5>
+	<!-- 방법1: F5 cached (F5랑 같음) -->
+	<button onclick="location = location;">리프레시01</button>
+
+	<!-- 방법2: F5 cached (F5랑 같음) -->
+	<button onclick="location.href = location.href;">리프레시02</button>
+	
+	<!-- 방법3: F5 cached (F5랑 같음) -->
+	<button onclick="location.assign('');">리프레시03</button>
+	
+	<!-- 방법4: F5 cached (F5랑 같음) -->
+	<button onclick="location.replace(location);">리프레시04</button>
+	
+	<h5>이거 쓰세요?</h5>
+	<!-- 방법5: F5 no cached (F5랑 같음) -->
+	<button onclick="location.reload();">리프레시05</button>
+	
+	<h5>리다이렉트 하는 버튼</h5>
+	<!-- 방법6: Redirect (딴데로 이동) -->
+	<button onclick="location.href = 'https://www.douzone.com';">우리회사</button>
+</body>
+<script type="text/javascript">
+	
+</script>
+</html>

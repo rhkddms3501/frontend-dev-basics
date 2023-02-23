@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	window.onload = function(){
+		setTimeout(function () {
+			var h3Element = document.createElement("h3");
+			var h3TextNode = document.createTextNode('😊안녕? DOM😊');
+			h3Element.append(h3TextNode);
+			
+			document.body.appendChild(h3Element);
+		}, 2000);
+	}
+</script>
+<body>
+	<h1>DOM(Document Object Model)</h1>
+	<h2>2. HTML Element 추가1</h2>
+</body>
+</html>
