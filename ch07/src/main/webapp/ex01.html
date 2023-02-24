@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<!-- 소스버전 (애플리케이션 서버 호스팅) -->
+<!--  <script src="/ch07/jquery/jquery-3.6.3.js"></script>-->
+
+<!-- 소스버전 (애플리케이션 서버 호스팅) -->
+<!-- <script src="/ch07/jquery/jquery-3.6.3.min.js"></script> -->
+
+<!-- 소스버전 (CDN 호스팅) -->
+<!-- <script src="https://code.jquery.com/jquery-3.6.3.js"></script> -->
+
+<!-- 압축버전 (CDN 호스팅) -->
+ <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+
+<script type="text/javascript">
+	//버전확인
+	console.log(jQuery().jquery, $().jquery);
+	
+	window.addEventListener('load', function(){
+		// jQuery Object
+		
+		setTimeout(() => {
+			var $obj = jQuery('h1');
+			$obj.css('color', 'red');
+			console.log(typeof(jQuery), typeof($obj), "length:" + $obj.length, $obj instanceof Array, $obj instanceof Object);
+		}, 1000);
+		
+	})
+	
+	//
+</script>
+<body>
+	<h1>jQuery 로딩</h1>
+</body>
+</html>
+ 

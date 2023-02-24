@@ -4,6 +4,20 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+<script type="text/javascript">
+	window.onload = function() {
+		setTimeout(function(){
+			var imgElement = document.createElement('img');
+			imgElement.src = 'https://blog.kakaocdn.net/dn/A4Jys/btrsSvkfSir/JdfPZxZ5LA9kGz3gsg3LcK/img.gif';
+			imgElement.style.width = "300px";
+			imgElement.alt = '어떡하지~ 어떡하지~';
+			imgElement.title = '어떡하지~ 어떡하지~';
+			imgElement['data-ne'] = 10;
+			
+			document.body.appendChild(imgElement);
+		},2000);	
+	}
+</script>
 <body>
 	<h1 id='h' data-no='10'>DOM(Document Object Model)</h1>
 	<h2>3. HTML Element 속성 조작하기1</h2>

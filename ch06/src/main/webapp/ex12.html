@@ -3,10 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+var registerEventHandler = function(element, eventName, eventHandler) {
+//   if(!element) {
+//      return;   
+//   }
+//   
+//   if(element.attachEvent) {
+//      /* IE8 이전 */
+//      element.attachEvent(eventName, eventHandler);
+//   } else {
+//      /* 표준 브라우저 */
+//      element.addEventListener(eventName, eventHandler);   
+//   }
+   
+   element &&                                          // element가 null이 아니면 
+   element.attachEvent &&                              // IE  8 버전 이전
+   element.attachEvent(eventName, eventHandler);
+
+   element &&                                          // element가 null이 아니면
+   element.addEventListener(eventName, eventHandler);   // 표준 브라우저
+};
+
+var clickEventHandler1 = function() {
+   console.log('click1');
+}
+
+var clickEventHandler2 = function() {
+   console.log('click2');
+}
+
+var clickEventHandler3 = function() {
+   console.log('click3');
+}
+
+window.addEventListener("load", function(){
+   var el = document.getElementById('header');
+   
+   // 다중 이벤트 핸들러 등록
+   // el.addEventListener('click', clickEventHandler1);
+   registerEventHandler(el, 'click', clickEventHandler1);
+   el.addEventListener('click', clickEventHandler2);
+   
+   // DOM Event Lv.0도 함계 지원
+   el.onclick = clickEventHandler3;
+   
+   // 제거
+   el.removeEventListener('click', clickEventHandler2);
+   
+   
+ });
+</script>
 </head>
 <body>
-	<h1>DOM(Document Object Model)</h1>
-	<h2>5. Event 처리</h2>
-	<h3 id='header'>Click!</h3>
+   <h1>DOM(Document Object Model)</h1>
+   <h2>5. Event 처리</h2>
+   <h3 id='header'>Click!</h3>
 </body>
 </html>

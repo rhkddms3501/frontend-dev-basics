@@ -4,6 +4,22 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+<script>
+/*
+ * 기본 이벤트 동작 막기
+    1. anchor: 버튼이나 메뉴로 사용할 때
+    2. form: valication, ajax 방식의 submlt 
+ */
+ 
+window.addEventListener("load", function(){
+   document
+      .getElementById('btn-delete')
+      .addEventListener('click', function(event) {
+         event.preventDefault();
+         console.log('비밀번호 입력 다이알로그 팝업 띠우기');
+      });
+});
+</script>
 <body>
 	<h1>DOM(Document Object Model)</h1>
 	<h2>6. 기본(default) Event Hanlder 동작 막기 - 1. anchor</h2>	
