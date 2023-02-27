@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>sample1</title>
-<script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
+<script type="text/javascript" src="./jquery/jquery-3.6.0.js"></script>
 <script type="text/javascript">
-
+/* 
 var images = [ 
 	"국화:Chrysanthemum.jpg", 
 	"사막:Desert.jpg", 
@@ -23,13 +23,117 @@ $(function(){
 		var result = Math.floor( Math.random() * (images.length-1)  ) + 1;
 	});
 	
+}); */
+
+$(function(){
+	$(window).scroll( ()=>{
+		var $window = $(this);
+		var $document = $(document);
+		
+		var windowHeight = $window.height();
+		var documentHeight = $document.height();
+		var scrollTop = $window.scrollTop();
+		
+		if(documentHeight < windowHeight + scrollTop + 10){
+			console.log("fetch() called");
+		}
+	});
 });
 </script>
 </head>
 <body>
-	<button>화면을 변경</button>
+	<!-- <button>화면을 변경</button>
 	<p>
 		<img src="images/Desert.jpg" alt="사막" />
-	</p>
+	</p> -->
+	
+	<h1>DOM Event(Timeline UI, Infinite Srolling)</h1>
+	<ul>
+		<li>
+			<strong>짱구</strong>
+			<p>호호이~</p>
+			<strong></strong>
+			<a href="#" data-no=''>삭제</a>
+		</li>
+		<li>
+			<strong>짱구</strong>
+			<p>호호이~</p>
+			<strong></strong>
+			<a href="#" data-no=''>삭제</a>
+		</li>
+		<li>
+			<strong>짱구</strong>
+			<p>호호이~</p>
+			<strong></strong>
+			<a href="#" data-no=''>삭제</a>
+		</li>
+		<li>
+			<strong>짱구</strong>
+			<p>호호이~</p>
+			<strong></strong>
+			<a href="#" data-no=''>삭제</a>
+		</li>
+		<li>
+			<strong>짱구</strong>
+			<p>호호이~</p>
+			<strong></strong>
+			<a href="#" data-no=''>삭제</a>
+		</li>
+		<li>
+			<strong>짱구</strong>
+			<p>호호이~</p>
+			<strong></strong>
+			<a href="#" data-no=''>삭제</a>
+		</li>
+		<li>
+			<strong>짱구</strong>
+			<p>호호이~</p>
+			<strong></strong>
+			<a href="#" data-no=''>삭제</a>
+		</li>
+		<li>
+			<strong>짱구</strong>
+			<p>호호이~</p>
+			<strong></strong>
+			<a href="#" data-no=''>삭제</a>
+		</li>
+		<li>
+			<strong>짱구</strong>
+			<p>호호이~</p>
+			<strong></strong>
+			<a href="#" data-no=''>삭제</a>
+		</li>
+		<li>
+			<strong>짱구</strong>
+			<p>호호이~</p>
+			<strong></strong>
+			<a href="#" data-no=''>삭제</a>
+		</li>
+		<li>
+			<strong>짱구</strong>
+			<p>호호이~</p>
+			<strong></strong>
+			<a href="#" data-no=''>삭제</a>
+		</li>
+		<li>
+			<strong>짱구</strong>
+			<p>호호이~</p>
+			<strong></strong>
+			<a href="#" data-no=''>삭제</a>
+		</li>
+		<li>
+			<strong>짱구</strong>
+			<p>호호이~</p>
+			<strong></strong>
+			<a href="#" data-no=''>삭제</a>
+		</li>
+		<li>
+			<strong>짱구</strong>
+			<p>호호이~</p>
+			<strong></strong>
+			<a href="#" data-no=''>삭제</a>
+		</li>
+		
+	</ul>
 </body>
 </html>
