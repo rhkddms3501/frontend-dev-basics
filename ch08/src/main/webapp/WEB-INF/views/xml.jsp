@@ -12,35 +12,35 @@
 $(function(){
 	$("button").click(function(){
 		$.ajax({
-			url: "${pageContext.request.contextPath}/api/json",
+			url: "${pageContext.request.contextPath}/api/xml",
 			async: true,
 			type: "get",
-			dataType: "json",
+			dataType: "xml",
 			success: function(response) {
-				if(response.result === "fail") {
-					console.error(response.message);
-					return;
-				}
+				// console.log(response);
+				var $data = $("data", response);
 				
-				var vo = response.data;
+				var $no = $("no", $data);
+				var $name = $("name", $data);
+				var $message = $("message", $data);
 				
 				var htmls = "";
-				htmls += ("<h3>" + vo.no + "</h3>");
-				htmls += ("<h4>" + vo.name + "</h4>");
-				htmls += ("<h5>" + vo.message + "</h5>");
+				htmls += ("<h3>" + $no.text() + "</h3>");
+				htmls += ("<h4>" + $name.text() + "</h4>");
+				htmls += ("<h5>" + $message.text() + "</h5>");
 				
-				$("#data").html(htmls);
+				$("#data").html(htmls);				
 			},
 			error: function(xhr, status, error) {
 				console.error(status, error);
 			}
 		});
 	});
-});
+})
 </script>
 </head>
 <body>
-	<h1>AJAX Test: JSON Format Data: $.ajax() 함수 사용하기</h1>
+	<h1>AJAX Test: XML Format Data</h1>
 	
 	<button>데이터 가져오기</button>
 	<div id="data"></div>
