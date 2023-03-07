@@ -38,7 +38,21 @@ console.log();
 // ex03: 여러행 함수
 [5, 3, 15, 1045, 43, 92].forEach( e=> {
     if(3 % 5){
-        process.stdout.write(` ${e}: ${(x => x*x)(e)}\t`);
+        process.stdout.write(` ${e}: ${(x => x*x)()}\t`);
     }
 });
 
+// ex4 - this를 어휘적으로 바인딩(Lexical Bind)
+console.log();
+console.log();
+
+const shinchan = {
+    name: '짱구',
+    friends: ['철수', '유리', '훈이', '맹구'],
+    printFriends: function(){
+        console.log(this); 
+        this.friends.forEach(f =>{console.log(`${this.name}의 친구 ${f}`)});
+    }
+}
+
+shinchan.printFriends();
